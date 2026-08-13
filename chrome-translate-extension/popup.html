@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Screenshot &amp; Translate</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0f0f17;
+      --surface:   #18181f;
+      --surface2:  #22222c;
+      --border:    rgba(255,255,255,0.08);
+      --accent:    #4f8ef7;
+      --accent-h:  #3a7bf5;
+      --text:      #e4e4f0;
+      --muted:     #7b7b96;
+      --green:     #34c88a;
+      --radius:    10px;
+    }
+
+    body {
+      font-family: -apple-system, 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      width: 280px;
+      padding: 0;
+    }
+
+    /* ── Header ────────────────────────────────────────── */
+    .popup-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 16px 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #4f8ef7 0%, #34c88a 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+
+    .logo-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.2;
+    }
+
+    .logo-sub {
+      font-size: 10px;
+      color: var(--muted);
+    }
+
+    /* ── Body ──────────────────────────────────────────── */
+    .popup-body { padding: 14px 16px; }
+
+    /* Field label */
+    .field-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    /* Language select */
+    select {
+      width: 100%;
+      padding: 9px 10px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--text);
+      font-size: 13px;
+      outline: none;
+      cursor: pointer;
+      margin-bottom: 12px;
+      transition: border-color 0.2s;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237b7b96' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      padding-right: 30px;
+    }
+
+    select:focus { border-color: var(--accent); }
+
+    /* Toggle switch row */
+    .toggle-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 12px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 14px;
+      cursor: pointer;
+      user-select: none;
+      transition: border-color 0.2s;
+    }
+
+    .toggle-row:hover { border-color: rgba(255,255,255,0.14); }
+
+    .toggle-label { font-size: 12px; color: var(--text); }
+    .toggle-sub { font-size: 10px; color: var(--muted); margin-top: 1px; }
+
+    /* Switch */
+    .switch {
+      position: relative;
+      width: 36px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+
+    .switch input { opacity: 0; width: 0; height: 0; position: absolute; }
+
+    .switch-track {
+      position: absolute;
+      inset: 0;
+      border-radius: 20px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .switch-thumb {
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--muted);
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    /* ── Font size control ───────────────────────────────── */
+    .size-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 12px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 10px;
+    }
+    .size-row-label {
+      font-size: 12px;
+      color: var(--text);
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+    .size-slider {
+      -webkit-appearance: none;
+      flex: 1;
+      height: 4px;
+      border-radius: 4px;
+      outline: none;
+      cursor: pointer;
+      background: linear-gradient(to right, var(--accent) 0%, var(--accent) var(--pct, 0%), var(--surface) var(--pct, 0%));
+      transition: opacity 0.2s;
+    }
+    .size-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--accent);
+      cursor: pointer;
+      box-shadow: 0 0 0 3px rgba(79,142,247,0.2);
+      transition: box-shadow 0.15s;
+    }
+    .size-slider::-webkit-slider-thumb:hover {
+      box-shadow: 0 0 0 5px rgba(79,142,247,0.25);
+    }
+    .size-slider:disabled { opacity: 0.3; cursor: default; }
+    .size-value {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent);
+      min-width: 30px;
+      text-align: right;
+      flex-shrink: 0;
+      font-variant-numeric: tabular-nums;
+    }
+    .size-auto-btn {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 600;
+      padding: 3px 8px;
+      cursor: pointer;
+      transition: all 0.15s;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+    .size-auto-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .size-auto-btn.active { border-color: var(--accent); color: var(--accent); background: var(--accent-dim); }
+
+    .switch input:checked + .switch-track { background: var(--accent); border-color: var(--accent); }
+    .switch input:checked ~ .switch-thumb { transform: translateX(16px); background: #fff; }
+
+    /* OCR toggle — distinct amber accent */
+    .ocr-row { border-color: rgba(251, 191, 36, 0.25); }
+    .ocr-row:hover { border-color: rgba(251, 191, 36, 0.5); background: rgba(251, 191, 36, 0.04); }
+    .ocr-row .switch input:checked + .switch-track {
+      background: #d97706; border-color: #d97706;
+    }
+    .ocr-badge {
+      display: inline-block;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      color: #d97706;
+      background: rgba(217, 119, 6, 0.15);
+      border: 1px solid rgba(217, 119, 6, 0.35);
+      border-radius: 4px;
+      padding: 1px 5px;
+      vertical-align: middle;
+      margin-left: 4px;
+      line-height: 1.4;
+    }
+
+    /* Main button */
+    #go {
+      width: 100%;
+      padding: 11px;
+      background: linear-gradient(135deg, #4f8ef7, #3a7bf5);
+      border: none;
+      border-radius: var(--radius);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      letter-spacing: 0.2px;
+      transition: opacity 0.2s, transform 0.1s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #go::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(rgba(255,255,255,0.08), transparent);
+    }
+
+    #go:hover { opacity: 0.9; }
+    #go:active { transform: scale(0.98); }
+    #go:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+
+    /* Status */
+    #status {
+      min-height: 18px;
+      margin-top: 10px;
+      font-size: 11.5px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    #status.error { color: #f87171; }
+
+    .spinner {
+      display: none;
+      width: 10px;
+      height: 10px;
+      border: 1.5px solid rgba(79,142,247,0.3);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      flex-shrink: 0;
+    }
+
+    #status.busy .spinner { display: block; }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* Footer */
+    .popup-footer {
+      border-top: 1px solid var(--border);
+      padding: 10px 16px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .popup-footer a {
+      font-size: 11px;
+      color: var(--muted);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: color 0.2s;
+    }
+
+    .popup-footer a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="popup-header">
+    <div class="logo-icon">🌐</div>
+    <div>
+      <div class="logo-name">Screenshot Translator</div>
+      <div class="logo-sub">Powered by Google Translate</div>
+    </div>
+  </div>
+
+  <div class="popup-body">
+    <label class="field-label" for="lang">Translate to</label>
+    <select id="lang">
+      <option value="en">🇺🇸 English</option>
+      <option value="es">🇪🇸 Spanish</option>
+      <option value="fr">🇫🇷 French</option>
+      <option value="de">🇩🇪 German</option>
+      <option value="zh">🇨🇳 Chinese</option>
+      <option value="ja">🇯🇵 Japanese</option>
+      <option value="th">🇹🇭 Thai</option>
+      <option value="hi">🇮🇳 Hindi</option>
+      <option value="ar">🇸🇦 Arabic</option>
+      <option value="pt">🇧🇷 Portuguese</option>
+      <option value="ko">🇰🇷 Korean</option>
+      <option value="it">🇮🇹 Italian</option>
+      <option value="ru">🇷🇺 Russian</option>
+    </select>
+
+    <div class="size-row">
+      <span class="size-row-label">Text size</span>
+      <input type="range" id="textSize" class="size-slider" min="8" max="22" value="14" />
+      <span id="sizeValue" class="size-value">Auto</span>
+      <button id="sizeAuto" class="size-auto-btn active" title="Use source page font size">Auto</button>
+    </div>
+
+    <label class="toggle-row" for="inPage">
+      <div>
+        <div class="toggle-label">Show in page</div>
+        <div class="toggle-sub">Overlay translations on your current page</div>
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="inPage" checked />
+        <div class="switch-track"></div>
+        <div class="switch-thumb"></div>
+      </label>
+    </label>
+
+    <label class="toggle-row" for="fullPage">
+      <div>
+        <div class="toggle-label">Full-page capture</div>
+        <div class="toggle-sub">Slower — scrolls through the entire page</div>
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="fullPage" />
+        <div class="switch-track"></div>
+        <div class="switch-thumb"></div>
+      </label>
+    </label>
+
+    <label class="toggle-row ocr-row" for="ocrImages">
+      <div>
+        <div class="toggle-label">Scan image text <span class="ocr-badge">OCR</span></div>
+        <div class="toggle-sub">Detect text inside images · requires Vision API</div>
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="ocrImages" />
+        <div class="switch-track"></div>
+        <div class="switch-thumb"></div>
+      </label>
+    </label>
+
+    <button id="go">🌐 Translate in Page</button>
+
+    <div id="status">
+      <div class="spinner"></div>
+      <span id="statusText"></span>
+    </div>
+  </div>
+
+  <div class="popup-footer">
+    <a href="#" id="openOptions">⚙️ API key settings</a>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

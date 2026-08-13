@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Original vs Translated</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:          #0d0d14;
+      --surface:     #16161f;
+      --surface2:    #1e1e2a;
+      --border:      rgba(255,255,255,0.07);
+      --accent:      #4f8ef7;
+      --accent-dim:  rgba(79,142,247,0.18);
+      --green:       #34c88a;
+      --text:        #e4e4f0;
+      --text-muted:  #7b7b96;
+      --radius:      12px;
+      --header-h:    56px;
+    }
+
+    body {
+      font-family: -apple-system, 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── Header ─────────────────────────────────────────── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      height: var(--header-h);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 0 20px;
+      background: rgba(13,13,20,0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .logo-icon {
+      width: 28px;
+      height: 28px;
+      background: linear-gradient(135deg, #4f8ef7, #34c88a);
+      border-radius: 7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+
+    .logo-text {
+      font-size: 13px;
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: 0.2px;
+    }
+
+    .divider { width: 1px; height: 20px; background: var(--border); flex-shrink: 0; }
+
+    #pageTitle {
+      font-size: 13px;
+      color: var(--text-muted);
+      flex: 1;
+      min-width: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Controls */
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .pill-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: var(--surface2);
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.18s;
+      user-select: none;
+    }
+    .pill-btn:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-dim); }
+    .pill-btn.active { border-color: var(--accent); color: var(--accent); background: var(--accent-dim); }
+
+    .pill-btn .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    /* Opacity slider */
+    .slider-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .slider-wrap input[type=range] {
+      -webkit-appearance: none;
+      width: 80px;
+      height: 4px;
+      border-radius: 4px;
+      background: var(--surface2);
+      outline: none;
+      cursor: pointer;
+    }
+    .slider-wrap input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--accent);
+      cursor: pointer;
+    }
+
+    /* ── Main layout ─────────────────────────────────────── */
+    .layout {
+      display: flex;
+      gap: 10px;
+      padding: 16px 20px;
+      max-width: 1440px;
+      margin: 0 auto;
+      min-height: calc(100vh - var(--header-h));
+    }
+
+    /* ── Pane ────────────────────────────────────────────── */
+    .pane {
+      flex: 1;
+      min-width: 0;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pane-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      background: var(--surface2);
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+
+    .pane-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .pane-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .pane-badge {
+      margin-left: auto;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+
+    .badge-original { background: rgba(255,255,255,0.06); color: var(--text-muted); }
+    .badge-translated { background: rgba(52,200,138,0.15); color: var(--green); }
+
+    .stage {
+      position: relative;
+      overflow: auto;
+      flex: 1;
+      /* Subtle grid background to show the image boundary */
+      background-color: #0a0a10;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+
+    .stage img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+    }
+
+    /* ── Overlay boxes ───────────────────────────────────── */
+    .overlay-box {
+      position: absolute;
+      background: rgba(10, 20, 48, 0.94);
+      border: 1.5px solid rgba(79, 142, 247, 0.6);
+      border-radius: 5px;
+      color: #e8f0fe;
+      font-family: -apple-system, 'Segoe UI', system-ui, sans-serif;
+      font-weight: 500;
+      line-height: 1.45;
+      white-space: pre-wrap;
+      padding: 3px 6px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.05);
+      overflow: hidden;
+      transition: opacity 0.2s;
+    }
+
+    .overlay-box::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(135deg, rgba(79,142,247,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    /* ── Empty / error state ─────────────────────────────── */
+    .empty-state {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      min-height: 300px;
+      gap: 12px;
+      color: var(--text-muted);
+      text-align: center;
+      padding: 40px;
+    }
+
+    .empty-icon { font-size: 36px; opacity: 0.5; }
+    .empty-title { font-size: 15px; font-weight: 600; color: var(--text); }
+    .empty-sub { font-size: 13px; line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div class="logo-icon">🌐</div>
+      <span class="logo-text">Screenshot Translator</span>
+    </div>
+    <div class="divider"></div>
+    <span id="pageTitle">Loading…</span>
+
+    <div class="controls">
+      <div class="slider-wrap">
+        <span>Text Size</span>
+        <input type="range" id="fontSizeSlider" min="0" max="48" value="0" title="Text size (0 = Auto)" />
+      </div>
+      <div class="slider-wrap">
+        <span>Opacity</span>
+        <input type="range" id="opacitySlider" min="20" max="100" value="94" title="Overlay opacity" />
+      </div>
+      <button class="pill-btn active" id="toggleOverlay">
+        <span class="dot"></span> Overlay on
+      </button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <div class="pane">
+      <div class="pane-header">
+        <div class="pane-dot" style="background:#7b7b96"></div>
+        <span class="pane-label">Original</span>
+        <span class="pane-badge badge-original">Source</span>
+      </div>
+      <div class="stage"><img id="originalImg" alt="Original page screenshot" /></div>
+    </div>
+
+    <div class="pane">
+      <div class="pane-header">
+        <div class="pane-dot" style="background:#34c88a"></div>
+        <span class="pane-label">Translated</span>
+        <span class="pane-badge badge-translated" id="blockCount">— blocks</span>
+      </div>
+      <div class="stage" id="translatedStage">
+        <img id="translatedImg" alt="Translated page screenshot" />
+      </div>
+    </div>
+  </div>
+
+  <script src="viewer.js"></script>
+</body>
+</html>

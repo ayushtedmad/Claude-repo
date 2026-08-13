@@ -1,0 +1,298 @@
+# Add your LinkedIn email ID and password. WARNING: KEEP THIS OFFLINE ON YOUR PC AND DO NOT COMMIT/UPLOAD.
+email: ayush.tedmad@gmail.com
+password: REDACTED
+
+# OpenAI API key for answering application questions when no answer can be determined using the information below. WARNING: KEEP THIS OFFLINE AND DO NOT COMMIT/UPLOAD.
+openaiApiKey: REDACTED
+
+# Anti-lock default is False to prevent your PC from sleeping to allow bot to run uninterrupted.
+# Set it to True if you wish to disable this functionality.
+disableAntiLock: False
+
+# Optional: Provide a direct LinkedIn Jobs search URL to navigate to.
+# If set, the bot will go directly to this URL instead of building one from positions/locations.
+# Leave commented out or empty to use the normal positions + locations search.
+# Example: url: "https://www.linkedin.com/jobs/search/?f_AL=true&keywords=Technical+Account+Manager&location=Singapore"
+url: "https://www.linkedin.com/jobs/collections/easy-apply/?currentJobId=4420427458&discover=true&discoveryOrigin=JOBS_HOME_EXPANDED_JOB_COLLECTIONS&subscriptionOrigin=JOBS_HOME"
+
+# Set to True if you wish to search for remote jobs only.
+remote: False
+
+# Set to True if you wish to search for jobs marked as "under 10 applicants" (default is False).
+lessthanTenApplicants: False
+
+# Set to True to sort by date posted, False to sort by relevance
+newestPostingsFirst: True
+
+# Set to True or False to suit your preference. Multiple True allowed.
+experienceLevel:
+ internship: False
+ entry: False
+ associate: False
+ mid-senior level: False
+ director: False
+ executive: False
+
+# Set to True or False to suit your preference. Multiple True allowed.
+jobTypes:
+ full-time: False
+ contract: False
+ part-time: False
+ temporary: False
+ internship: False
+ other: False
+ volunteer: False
+
+# Set ONLY one as True to suit your preference.
+date:
+ all time: True
+ month: False
+ week: False
+ 24 hours: False
+
+# Remove hash sign to add positions. You can add as many as you need, but preserve formatting
+positions:
+ - Technical Account Manager 
+ #- Visa Sponsorship
+ #- Indian
+ #- Technical Sales Engineer
+ #- Sales Engineer
+ #- international
+ #- API
+ #- AI
+ #- Key Account Manager
+ #- API Integration Specialist
+ #- Partner Integration Manager
+ #- Technical Program Manager
+ #- Product Specialist
+ #- Business Analyst
+ #- Data Analyst
+ #- Business Intelligence
+ #- Machine Learning Operations
+ #- AI Integration Engineer
+ #- AI Solutions Architect
+
+# Remove hash sign to add locations. You can add as many as you need including adding 'Remote' as a location but first location must be a valid country.
+locations:
+- Bangkok
+- Chiang Mai
+- Phuket
+
+- Singapore
+
+- Tokyo
+- Osaka
+- Yokohama
+
+- Sydney
+- Melbourne
+- Brisbane
+- Perth
+
+- Auckland
+- Wellington
+- Christchurch
+
+
+
+
+ #- Bangkok
+ #- Singapore
+ #- Remote
+ #- Japan
+ #- South korea
+ #- Australia
+ #- New Zealand
+ #- Spain
+ #- Germany
+ #- Canada
+ #- Hong Kong
+ #- Remote
+ #- Amsterdam
+ #- Dubai
+ #- United States
+# Set to True if you are residing in the country of job
+residentStatus: True
+
+# Distance from the location added above. Allowed values are {0, 5, 10, 25, 50, 100}, use only one.
+distance: 100
+
+# Optional directory to save logs, does not work sometimes. Does not work sometimes, so leave it unchanged.
+outputFileDirectory: ~/Documents/Applications/EasyApplyBot/EasyApplyBot/
+
+# Companies you don't want to apply.
+companyBlacklist:
+ #- Samsotech
+ #- HBX
+
+# Job titles you want to avoid applying. Use it to refine performance of bot.
+titleBlacklist:
+ #- word1
+ #- word2
+
+# Bot will not apply to jobs posted by black listed people.
+posterBlacklist:
+ #- name1
+ #- name2
+
+# Path to your CV/resume and cover letter (remove hash sign). These paths often don't work
+# so apply one job manually once, bot will reuse manually uploaded CV for automating the task.
+# Note: Prefer a path without spaces, i.e. instead of "Me My" to "MeMy" or "Me_My".
+uploads:
+ resume: C:\Resume.pdf
+ # Cover letter is optional
+ coverLetter: C:\CoverLettter.pdf
+
+
+# ------------ QA section -------------------
+
+# ------------ Additional parameters: checkboxes ---------------
+checkboxes:
+ # Do you have a valid driver's license? (yes/no checkbox)
+ driversLicence: True
+ # Will you now, or in the future, require sponsorship for employment visa status (e.g. H-1B visa status)? (yes/no checkbox)
+ # This is relative to the location and your citizenship applying above, and same with legallyAuthorized.
+ requireVisa: True
+ # Are you legally authorized to work in COUNTRY? (yes/no checkbox)
+ legallyAuthorized: True
+ # Do you have necessary licenses or certifications required in your profession? E.g. CPA, CA, CFA, professional license
+ certifiedProfessional: True
+ # We must fill this position urgently. Can you start immediately? (yes/no checkbox)
+ urgentFill: True
+ # Are you comfortable commuting or work on-site to this job's location? (yes/no checkbox)
+ commute: True
+ # Are you comfortable working in a remote environment? (yes/no checkbox)
+ remote: True
+ # Are you comfortable taking a drug in accordance with local/state laws? (yes/no checkbox)
+ drugTest: True
+ # Are you willing to complete an assessment? (yes/no checkbox)
+ assessment: True
+ # Do you have security clearance of [xxx] country? (yes/no checkbox)
+ securityClearance: False
+ # Have you completed the following level of education: DEGREE TYPE? Remove applicable # signs (yes/no checkbox)
+ degreeCompleted:
+   - High School Diploma
+   - Bachelor's Degree
+  # - Associate's Degree
+  # - Master's Degree
+   - Master of Business Administration
+  # - Doctor of Philosophy
+  # - Doctor of Medicine
+  # - Doctor of Law
+ # Are you willing to undergo a background check, in accordance with local law/regulations?
+ backgroundCheck: True
+
+# ------------ Additional parameters: universityGpa ---------------
+universityGpa: 6.0
+
+# ------------ Additional parameters: salaryMinimum ---------------
+salaryMinimum: 1
+
+# ------------ Additional parameters: languages ---------------
+languages:
+ english: Native or bilingual # Allowed choices { None, Conversational, Professional, Native or bilingual }
+ # arabic: Conversational
+ # french: Professional
+
+# ------------ Additional parameters: noticePeriod in weeks ---------------
+noticePeriod: 0
+
+# ------------ Additional parameters: years of experience ---------------
+# How many years of work experience do you have ...? (whole numbers only).
+# You may add more skills depending on your industry or profession at the bottom.
+# Use `unprepared questions.csv` to add more depending on your use case.
+experience:
+ # normal ones
+ Accounting/Auditing: 0
+ Administrative : 4
+ Advertising : 0
+ Analyst : 0
+ Art/Creative: 0
+ Business Development: 6
+ Consulting: 6
+ Customer Service: 0
+ Distribution Design: 0
+ Education: 0
+ Engineering: 6
+ Finance: 0
+ General Business: 4
+ Health Care Provider: 0
+ Human Resources: 2
+ Information Technology: 6
+ Legal: 0
+ Management: 2
+ Manufacturing: 0
+ Marketing: 0
+ Public Relations: 0
+ Purchasing: 0
+ Product Management: 2
+ Project Management: 2
+ Production: 2
+ Quality Assurance: 0
+ Research: 0
+ Sales: 6
+ Science: 0
+ Strategy/Planning: 0
+ Supply Chain: 0
+ Training: 2
+ Writing/Editing: 2
+ VBA: 0
+ PowerBI: 0
+ PowerQuery: 0
+ Excel: 6
+ PowerPoint: 6
+ Word: 6
+ SQL Server: 2
+ Communication: 0
+ Financial markets: 0
+ Business: 2
+ Financial services: 0
+ Team leadership: 0
+ Cash flow: 0
+ Hedging: 0
+ Treasury services: 0
+ Microsoft Power BI: 2
+ Accounting: 0
+ Auditing: 0
+ Financial modeling: 0
+ Budgeting & forecasting: 0
+ FP&A: 0
+ PQE: 0
+ Training & Development: 0
+ python: 2
+ selenium: 2
+ # default to put for any industry/skill that you did not list
+ default: 6
+
+# ------------ Additional parameters: personal info ---------------
+personalInfo:
+ Pronouns: Mr.
+ First Name: Ayush
+ Last Name: Tiwari
+ Phone Country Code: Thailand (+66) # See Linkedin for your country code, must be exact according to the international platform, i.e. Italy (+39) not Italia (+39)
+ Mobile Phone Number: 800613970
+ Street address: Bangkok
+ City: Bangkok # Include the state/province as well!
+ State: Bangkok
+ Zip: 10001
+ Linkedin: https://www.linkedin.com/in/my-linkedin-profile
+ Website: https://www.my-website.com # github/website is interchangeable here
+ MessageToManager: "Hi, I am interested to join your organization. Please have a look at my resume. Thank you." # Keep message short and within the quotes. This is a testing feature and may not work.
+
+# ------------ Additional parameters: USA employment crap ---------------
+eeo:
+ gender: Male
+ race: None
+ veteran: None
+ disability: None
+ citizenship: yes
+ clearance: no
+
+# Evaluate job fit for each job posting using OpenAI, if OpenAI API Key is configured.
+evaluateJobFit: True
+
+# Path to the text version of your resume, used to extract text from the resume for AI evaluation of job fit, used if OpenAI API Key is configured and evaluateJobFit is True.
+textResume: C:\Resume.txt
+
+# Debugging mode, used to print more information to the console and fetch more information in AI responses
+debug: True

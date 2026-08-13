@@ -1,0 +1,62 @@
+{
+  "twine.net": {
+    "steps": [
+      {
+        "action": "fill",
+        "selector": "input.eycNYHLK.form-control",
+        "value": "Ayush Tiwar"
+      },
+      {
+        "action": "fill",
+        "selector": "input.eycNYHLK.form-control",
+        "value": "Ayush Tiwa"
+      },
+      {
+        "action": "fill",
+        "selector": "input.eycNYHLK.form-control",
+        "value": "Ayush Tiw"
+      },
+      {
+        "action": "fill",
+        "selector": "input.eycNYHLK.form-control",
+        "value": "Ayush Ti"
+      },
+      {
+        "action": "fill",
+        "selector": "input.eycNYHLK.form-control",
+        "value": "Ayush T"
+      },
+      {
+        "action": "fill",
+        "selector": "input.eycNYHLK.form-control",
+        "value": "{first_name}"
+      },
+      {
+        "action": "fill",
+        "selector": "input.eycNYHLK.form-control",
+        "value": "Ayus"
+      }
+    ],
+    "strategy": "manual_form",
+    "success_count": 1,
+    "last_used": "2026-06-18",
+    "learned_from": "2026-06-18 20:56:06"
+  },
+  "lever.co": {
+    "steps": [
+      {
+        "action": "fill",
+        "selector": "#resume-upload-input",
+        "value": "C:\\fakepath\\Resume.pdf"
+      },
+      {
+        "action": "upload",
+        "selector": "#resume-upload-input"
+      }
+    ],
+    "strategy": "manual_form",
+    "success_count": 3,
+    "last_used": "2026-06-22",
+    "learned_from": "2026-06-22 10:54:06"
+  }
+}

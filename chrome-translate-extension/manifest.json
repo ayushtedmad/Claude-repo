@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Page Screenshot Translator",
+  "version": "1.0.0",
+  "description": "Screenshot the current page and view a side-by-side original vs. translated overlay.",
+  "permissions": ["activeTab", "scripting", "storage", "tabs"],
+  "host_permissions": [
+    "<all_urls>",
+    "https://translation.googleapis.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Screenshot & Translate"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "options.html",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

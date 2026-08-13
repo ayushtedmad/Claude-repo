@@ -1,0 +1,241 @@
+answer_type,question_text,user_answer
+radio,have you ever heard about sprinto before applying?,
+radio,have you applied to sprinto for a role before?,
+radio,which industry did your last organizations belong to?,
+radio,what was the size of your last organization?,
+radio,how many years of professional experience do you have?,
+radio,"in your last roles, what capacity did you work in?",
+radio,how many years have you been in your current company?,
+radio,what kind of work setup do you prefer?,
+text,briefly describe the focus of your current or last organization?,
+text,what are your top 3 kpis from your last two roles?,
+radio,what is your biggest motivation for choosing a job?,
+text,your annual ctc (fixed + variable) in lpa,
+text,your expected ctc in lpa,
+dropdown,"notice period
+notice period",
+dropdown,"邮箱地址
+邮箱地址",
+dropdown,"国家/地区电话区号
+国家/地区电话区号",
+text,手机号码,
+numeric,whats your current ctc in lakhs / year ?,
+numeric,"how many days you need to join, if selected and offered ?",
+dropdown,"are you open to work from office, 5 days / week ?
+are you open to work from office, 5 days / week ?",
+numeric,kindly share you current ctc in annual inr?,
+numeric,what's your current ctc?,
+dropdown,"do you have a laptop with wifi?
+do you have a laptop with wifi?",
+dropdown,"have you supported customers based in the us or north america?
+have you supported customers based in the us or north america?",
+numeric,what is your current ctc?,
+dropdown,"are you located in india?
+are you located in india?",
+radio,are you available to work 9:00 am – 5:00 pm pst and open to supporting alternate shifts or additional coverage as operational needs require?,
+radio,can you work 40 hours per week?,
+radio,"this role sometimes requires nights and weekends, please confirm that is acceptable.",
+numeric,what's your expected ctc?,
+dropdown,"2.are you ok with the budget of 12lpa?
+2.are you ok with the budget of 12lpa?",
+dropdown,"have you completed a bachelor’s degree in any of the following? computer science, information systems, engineering, or a related field.
+have you completed a bachelor’s degree in any of the following? computer science, information systems, engineering, or a related field.",
+dropdown,"are you ready to support 3 pm to 12.30 am shift?
+are you ready to support 3 pm to 12.30 am shift?",
+numeric,what is your ectc?,
+numeric,what is your exp as a netsuite developer?,
+numeric,how would you rate your communication skills on a scale of 1 to 10?,
+dropdown,"are you an immediate joiner? 
+are you an immediate joiner?",
+dropdown,"have you held a cto, cio or vp engineering role at an fmcg/cpg company or a major system integrator serving the sector?
+have you held a cto, cio or vp engineering role at an fmcg/cpg company or a major system integrator serving the sector?",
+numeric,please enter the exact number of fmcg companies where you currently hold active & direct relationships with it leadership or the c-suite,
+dropdown,"have you led or overseen a dms/wms rollout, sap s/4hana migration or large it transformation at an fmcg firm?
+have you led or overseen a dms/wms rollout, sap s/4hana migration or large it transformation at an fmcg firm?",
+dropdown,"what is your current fixed compensation range?
+what is your current fixed compensation range?",
+radio,your notice period (in days),
+dropdown,"have you previously worked at or sold into b2b saas companies?
+have you previously worked at or sold into b2b saas companies?",
+dropdown,"have you worked at a startup or early-stage company?
+have you worked at a startup or early-stage company?",
+dropdown,"have you used a structured sales methodology (e.g. meddpicc, challenger, spin)?
+have you used a structured sales methodology (e.g. meddpicc, challenger, spin)?",
+dropdown,"do you have deep technical or commercial knowledge of commodity pricing in at least one of these substrates: plastics, paper, metal, glass?
+do you have deep technical or commercial knowledge of commodity pricing in at least one of these substrates: plastics, paper, metal, glass?",
+dropdown,"part of this role involves contributing local market insights to drive data accuracy. are you currently in a position where you hear about or negotiate regional packaging prices on a weekly basis?
+part of this role involves contributing local market insights to drive data accuracy. are you currently in a position where you hear about or negotiate regional packaging prices on a weekly basis?",
+dropdown,"are you currently based in and actively working within the specific target area/region you are applying for?
+are you currently based in and actively working within the specific target area/region you are applying for?",
+numeric,how big is your packagng network that you can contact immediately?,
+numeric,cgpa in mba,
+dropdown,"are u in australia now?
+are u in australia now?",
+dropdown,"do you currently hold a microsoft 365 or google workspace certification?
+do you currently hold a microsoft 365 or google workspace certification?",
+radio,您是否已获得ou completed the following level of education: bachelor's degr学历？,
+numeric,what is your current ctc? (fixed),
+numeric,what is your expected ctc? (fixed),
+dropdown,"have you completed your mba/pgdm?
+have you completed your mba/pgdm?",
+dropdown,"do you manage the complete sales cycle from lead generation to deal closure?
+do you manage the complete sales cycle from lead generation to deal closure?",
+numeric,your current ctc,
+numeric,your expected ctc,
+dropdown,"have you sold any hrms platforms such as zoho people strong, keka, greythr, sap successfactors, or workday?
+have you sold any hrms platforms such as zoho people strong, keka, greythr, sap successfactors, or workday?",
+numeric,"mention your fixed ctc in lpa. ps: only include the fixed component of your ctc excluding any bonus, incentives etc.",
+numeric,how soon you can join us?,
+radio,"please respond truthfully. how much experience do you have working with elevenlabs in production environments, including deploying, configuring, monitoring, and improving live voice agents?",
+radio,"please respond truthfully. how much experience do you have designing solution architectures for voice ai, integration, or enterprise application environments?",
+radio,"please respond truthfully. how much experience do you have designing, configuring, and improving production voice ai agents, including conversational flows, prompts, escalation paths, and fallback handling?",
+radio,please respond truthfully. how much experience do you have developing middleware or api integrations between voice ai platforms and external business systems?,
+radio,"please respond truthfully. how much experience do you have troubleshooting and optimising production systems for latency, interruptions, fallback scenarios, reliability, and performance issues?",
+radio,"please respond truthfully. how much experience do you have implementing calendar or scheduling integrations with platforms such as google calendar, microsoft 365, or similar systems?",
+radio,"please respond truthfully. what level of experience do you have working with telephony, contact-centre, or voice communication platforms such as genesys, twilio, amazon connect, sip, or webrtc?",
+radio,"please respond truthfully. how much experience do you have integrating voice ai solutions with internal business platforms, crm systems, contact-centre systems, or custom enterprise applications?",
+radio,"please respond truthfully. how much experience do you have creating technical documentation, sops, architecture standards, or deployment blueprints for production systems?",
+radio,please respond truthfully. how much direct experience do you have working with voice ai or conversational ai solutions in production environments?,
+radio,please respond truthfully. what is your level of spoken and written english?,
+radio,"are you comfortable working the fixed shift hours of 12 pm – 9:30 pm ist (summer) and 1 pm – 10:30 pm ist (winter), monday to friday?",
+radio,we are looking for candidates who can start within the next 30 days. ⚠️ providing false or misleading information will result in disqualification. candidates progressing to the next stage will be required to upload proof of their notice period or last working day before meeting the client. when is your earliest realistic start date?,
+dropdown,"what is your current salary in lpa? we will cross-check references later in the process.
+what is your current salary in lpa? we will cross-check references later in the process.",
+dropdown,"what is your minimum expected salary (lpa, ctc)?
+what is your minimum expected salary (lpa, ctc)?",
+radio,are you open to negotiation?,
+radio,"do you acknowledge that submitting more than one application for the same role, or providing any false or misleading information, will automatically and permanently disqualify you from the recruitment process?",
+dropdown,"are you happy working within us time zone? 
+are you happy working within us time zone?",
+dropdown,"have you ever built or maintained dashboards for tracking kpis or gtm metrics? (from 0-1)have you ever managed product launches or release operations between product, marketing, and sales teams?
+have you ever built or maintained dashboards for tracking kpis or gtm metrics? (from 0-1)have you ever managed product launches or release operations between product, marketing, and sales teams?",
+numeric,"what is your proficiency level in chinese / mandarin? (rate from 1-5, 5 being the strongest)",
+dropdown,"have you ever built or maintained dashboards for tracking kpis or gtm metrics? (from 0-1)
+have you ever built or maintained dashboards for tracking kpis or gtm metrics? (from 0-1)",
+dropdown,"do you own a self-custody / non-custodial wallet?
+do you own a self-custody / non-custodial wallet?",
+radio,have you completed the following level of education: master's degree?,
+dropdown,"do you have knowledge in at least two of the following areas? mechanical, thermal, environmental, chemical & physical properties, electrical, ndt, or failure analysis testing methods
+do you have knowledge in at least two of the following areas? mechanical, thermal, environmental, chemical & physical properties, electrical, ndt, or failure analysis testing methods",
+dropdown,"are you open to working in a us shift (6:00 pm – 3:00 am ist)? 
+are you open to working in a us shift (6:00 pm – 3:00 am ist)?",
+numeric,"if selected, how soon can you join? (immediate / 15 days / 30 days / other)",
+numeric,current ctc (in lpa),
+numeric,expected ctc (in lpa),
+numeric,what is your expected hourly consulting rate?,
+dropdown,"have you conducted architecture workshops or discovery sessions with senior stakeholders (vps, directors, c-level executives)?
+have you conducted architecture workshops or discovery sessions with senior stakeholders (vps, directors, c-level executives)?",
+dropdown,"have you worked with enterprise or fortune 500 clients in a client-facing consulting role?
+have you worked with enterprise or fortune 500 clients in a client-facing consulting role?",
+numeric,number of years in automotive aftermarket in 4w or 2w,
+numeric,how many years of negotiating with b2b clients do you have?,
+numeric,how many years of managing projects do you have?,
+dropdown,"do you have proven track record of launching and scaling saas platforms from launch to market leadership?
+do you have proven track record of launching and scaling saas platforms from launch to market leadership?",
+dropdown,"are you currently based in australia with full working rights?
+are you currently based in australia with full working rights?",
+dropdown,"the budget for the role is 20 - 30 lpa?
+the budget for the role is 20 - 30 lpa?",
+dropdown,"have you worked on sap s/4hana finance transformation projects?
+have you worked on sap s/4hana finance transformation projects?",
+dropdown,"have you worked as a product owner, product lead, or digital transformation lead?
+have you worked as a product owner, product lead, or digital transformation lead?",
+dropdown,"can you join within 15 days or less?
+can you join within 15 days or less?",
+dropdown,"have you closed enterprise saas deals with an acv greater than ₹50 lakhs?
+have you closed enterprise saas deals with an acv greater than ₹50 lakhs?",
+numeric,how many years have you worked as a travel & expense manager ?,
+numeric,how many months are you available for the internship?,
+dropdown,"do you have a laptop ?
+do you have a laptop ?",
+numeric,what's your current ctc ?,
+dropdown,"are you ready to activate council membership at the minimum founding level of chf/usd 10,000, subject to review and onboarding?
+are you ready to activate council membership at the minimum founding level of chf/usd 10,000, subject to review and onboarding?",
+dropdown,"are you prepared to support the 2030 national nexus consortium pathway through council participation, national programming, and stakeholder engagement?
+are you prepared to support the 2030 national nexus consortium pathway through council participation, national programming, and stakeholder engagement?",
+dropdown,"do you understand that membership enables eligibility and review, but does not guarantee a board seat, title, appointment, authority, or leadership role?
+do you understand that membership enables eligibility and review, but does not guarantee a board seat, title, appointment, authority, or leadership role?",
+numeric,how many existing it client relationships do you have that you could immediately onboard?,
+dropdown,"do you have working knowledge of lead generation tools such as linkedin sales navigator, apollo, etc?
+do you have working knowledge of lead generation tools such as linkedin sales navigator, apollo, etc?",
+numeric,please share your expected ctc (kindly mention it in lakhs).,
+dropdown,"do you currently sell (must have): iam/ pam/ pki/ clm? 
+do you currently sell (must have): iam/ pam/ pki/ clm?",
+text,how did you hear about this job?,
+text,address line 1,
+text,address line 2,
+text,zip/postal code,
+text,state/province,
+text,"please mention the fp&a products you have worked hands-on such as anaplan, onestream, sap bpc/sac, oracle epm etc.",
+text,"do you have background in strong consulting / client facing role / customer success / pre-sales related roles? the primary focus of the role is on driving adoption, renewal and expansion with india customers and prior customer facing expertise is required.",
+text,country where you live?,
+text,your personal email address,
+dropdown,"do you have the legal right to work in canada?
+do you have the legal right to work in canada?",
+text,how many hours per week are you legally permitted to work in canada?,
+text,what languages do you read/write/speak fluently?,
+text,home address,
+text,"you are required to work for hours a day, five days a week. standard working hours would be 8:30 am—5:30 pm est. do you agree? please mention your time zone.",
+text,"on rare occasions, if your work commitment goes beyond the regular 8 hours, would you be willing to work overtime?",
+text,are you currently set up for remote work in your space?,
+text,"describe your most recent (or relevant) position, responsibilities, and how the company measured your success was measured.",
+text,what are you looking for in your ideal role?,
+text,why do you believe you will be successful in this role?,
+text,"if you currently work full-time somewhere else, why do you seek a new opportunity? *",
+text,"what do you know about ekwa.com, and why do you want to work here?",
+numeric,"on a scale of 1-10, how much do you rate yourself in spoken english?",
+numeric,what is your current ctc (in lacs)?,
+numeric,what is your expected ctc(in lacs)?,
+dropdown,"are you open to working in the us time zones - both eastern and pacific?
+are you open to working in the us time zones - both eastern and pacific?",
+dropdown,"have you personally managed linkedin outbound campaigns using sales navigator and been responsible for improving campaign performance (not just sending messages)?
+have you personally managed linkedin outbound campaigns using sales navigator and been responsible for improving campaign performance (not just sending messages)?",
+dropdown,"do you regularly use ai tools such as chatgpt, claude, perplexity, or similar tools in your daily work to research, write, analyze, or automate workflows?
+do you regularly use ai tools such as chatgpt, claude, perplexity, or similar tools in your daily work to research, write, analyze, or automate workflows?",
+dropdown,"have you worked on sap fi-gl, fi-ap, and fi-ar configurations?
+have you worked on sap fi-gl, fi-ap, and fi-ar configurations?",
+numeric,number of countries/regions supported in your sap projects?,
+dropdown,"have you been part of an s/4hana implementation or migration project?
+have you been part of an s/4hana implementation or migration project?",
+dropdown,"have you worked in a global or multi-country erp environment?
+have you worked in a global or multi-country erp environment?",
+dropdown,"have you used tools like jira, confluence, or servicenow in your projects?
+have you used tools like jira, confluence, or servicenow in your projects?",
+numeric,number of full-cycle sap implementations completed?,
+numeric,number of implementations where you were involved in go-live,
+dropdown,"do you have an active abn, or are you willing to obtain one to work as a contractor?
+do you have an active abn, or are you willing to obtain one to work as a contractor?",
+dropdown,"do you have a current working with children check (wwcc)?
+do you have a current working with children check (wwcc)?",
+dropdown,"have you completed a qualification in teaching?
+have you completed a qualification in teaching?",
+dropdown,"are you currently located in australia?
+are you currently located in australia?",
+dropdown,"are you legally eligible to work in australia?
+are you legally eligible to work in australia?",
+dropdown,"do you have a private car for work?
+do you have a private car for work?",
+dropdown,"have you managed or developed ib (introducing broker), affiliate, or partner networks within a forex/cfd brokerage environment?
+have you managed or developed ib (introducing broker), affiliate, or partner networks within a forex/cfd brokerage environment?",
+dropdown,"have you previously worked with kpis related to client deposits, net deposits, trading volume, revenue generation, or active trader growth?
+have you previously worked with kpis related to client deposits, net deposits, trading volume, revenue generation, or active trader growth?",
+dropdown,"do you currently have an existing network of traders, ibs, affiliates, money managers, or business partners in thailand that you can leverage for business development?
+do you currently have an existing network of traders, ibs, affiliates, money managers, or business partners in thailand that you can leverage for business development?",
+dropdown,"are you willing to work night hours, between 6:30 pm to 2:30 am to match us/canada work hours?
+are you willing to work night hours, between 6:30 pm to 2:30 am to match us/canada work hours?",
+dropdown,"can you fill this role immediately?
+can you fill this role immediately?",
+dropdown,"are you currently on a career break - voluntary or otherwise? (the above information is captured only for our candidate records and it does not impact equal employment opportunity at emeritus)
+are you currently on a career break - voluntary or otherwise? (the above information is captured only for our candidate records and it does not impact equal employment opportunity at emeritus)",
+numeric,what is your current ctc in lacs per annum?,
+numeric,how much revenue have you generated in the us market (in an outsourcing company)?,
+dropdown,"do you have resources(laptop & wi-fi connection) for work ?
+do you have resources(laptop & wi-fi connection) for work ?",
+dropdown,"are you immediate joiner?
+are you immediate joiner?",
+radio,veteran status,
+text,how did you first hear about this job?,
+radio,do you currently have the right to work in the country where the job you are applying for is located? ,
+dropdown,"this role is based full-time in our bangkok, thailand office. what is your current work authorization status for thailand?
+this role is based full-time in our bangkok, thailand office. what is your current work authorization status for thailand?",
+radio,do you speak english?,
