@@ -1,5 +1,5 @@
 # Add your LinkedIn email ID and password. WARNING: KEEP THIS OFFLINE ON YOUR PC AND DO NOT COMMIT/UPLOAD.
-email: ayush.tedmad@gmail.com
+email: johndoe@example.com
 password: REDACTED
 
 # OpenAI API key for answering application questions when no answer can be determined using the information below. WARNING: KEEP THIS OFFLINE AND DO NOT COMMIT/UPLOAD.
@@ -18,7 +18,7 @@ url: "https://www.linkedin.com/jobs/search-results/?currentJobId=4425819516&keyw
 
 # Set to True to also apply to jobs that redirect to the company's own website (non-Easy Apply).
 # The bot will open the company site in a new tab, upload your CV, and fill in name/email/phone.
-# Note: External sites vary widely — the bot will do its best but may not complete every form.
+# Note: External sites vary widely â€” the bot will do its best but may not complete every form.
 applyExternalJobs: False
 
 # Set to True if you wish to search for remote jobs only.
@@ -273,7 +273,7 @@ experience:
 # ------------ Additional parameters: personal info ---------------
 personalInfo:
  Pronouns: Mr.
- First Name: Ayush
+ First Name: John Doe
  Last Name: Tiwari
  Phone Country Code: Thailand (+66) # See Linkedin for your country code, must be exact according to the international platform, i.e. Italy (+39) not Italia (+39)
  Mobile Phone Number: 800613970

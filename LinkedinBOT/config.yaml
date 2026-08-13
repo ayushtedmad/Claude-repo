@@ -1,5 +1,5 @@
 # Add your LinkedIn email ID and password. WARNING: KEEP THIS OFFLINE ON YOUR PC AND DO NOT COMMIT/UPLOAD.
-email: ayush.tedmad@gmail.com
+email: johndoe@example.com
 password: REDACTED
 
 # OpenAI API key for answering application questions when no answer can be determined using the information below. WARNING: KEEP THIS OFFLINE AND DO NOT COMMIT/UPLOAD.
@@ -222,7 +222,7 @@ experience:
 # ------------ Additional parameters: personal info ---------------
 personalInfo:
  Pronouns: Mr.
- First Name: Ayush
+ First Name: John Doe
  Last Name: Tiwari
  Phone Country Code: Thailand (+66) # See Linkedin for your country code, must be exact according to the international platform, i.e. Italy (+39) not Italia (+39)
  Mobile Phone Number: 800613970

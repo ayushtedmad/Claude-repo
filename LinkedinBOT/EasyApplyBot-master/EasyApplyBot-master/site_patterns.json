@@ -4,27 +4,27 @@
       {
         "action": "fill",
         "selector": "input.eycNYHLK.form-control",
-        "value": "Ayush Tiwar"
+        "value": "John Doe Tiwar"
       },
       {
         "action": "fill",
         "selector": "input.eycNYHLK.form-control",
-        "value": "Ayush Tiwa"
+        "value": "John Doe Tiwa"
       },
       {
         "action": "fill",
         "selector": "input.eycNYHLK.form-control",
-        "value": "Ayush Tiw"
+        "value": "John Doe Tiw"
       },
       {
         "action": "fill",
         "selector": "input.eycNYHLK.form-control",
-        "value": "Ayush Ti"
+        "value": "John Doe Ti"
       },
       {
         "action": "fill",
         "selector": "input.eycNYHLK.form-control",
-        "value": "Ayush T"
+        "value": "John Doe T"
       },
       {
         "action": "fill",
@@ -34,7 +34,7 @@
       {
         "action": "fill",
         "selector": "input.eycNYHLK.form-control",
-        "value": "Ayus"
+        "value": "John Doe"
       }
     ],
     "strategy": "manual_form",
